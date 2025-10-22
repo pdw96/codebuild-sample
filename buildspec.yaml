@@ -12,4 +12,9 @@ phases:
       - npm run build
   post_build:
     commands:
-      - aws s3 sync ./dist s3://pdw9610-bucket-1
+      - echo POST BUILDING...
+artifacts: codedeploy-sample.zip # 빌드 결과물을 지정하는 항목
+  files:
+    - 'dist/**/*'
+    - appspec.yml
+    - scripts/*
