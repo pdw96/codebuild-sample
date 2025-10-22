@@ -13,7 +13,7 @@ phases:
   post_build:
     commands:
       - echo POST BUILDING...
-artifacts: codedeploy-sample.zip # 빌드 결과물을 지정하는 항목
+artifacts: # 빌드 결과물을 지정하는 항목
   files:
     - 'dist/**/*'
     - appspec.yml
